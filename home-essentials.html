@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home Essentials — Mirth and Mallow</title>
+<meta name="description" content="Handmade crochet pieces to make your everyday spaces cozier, warmer and more you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Playfair+Display:wght@400;500&family=Poppins:wght@300;400;500&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="shop">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="crumbs"><a href="index.html">Home</a> › <a href="#">Shop</a> › <b>Home Essentials</b></nav>
+    <h1>Home Essentials
+      <svg viewBox="0 0 64 64"><g stroke="#5c7a4a" fill="none" stroke-width="1.6"><path d="M20 58c2-14 8-22 18-30"/><path d="M26 46c-8 0-12-4-12-10 7 0 12 4 12 10zM32 38c6-1 10-5 10-11-6 0-10 5-10 11z"/></g><g transform="translate(36 22)"><g fill="#fff" stroke="#e07a6a" stroke-width="1.6"><circle cy="-11" r="7"/><circle cx="10" cy="-4" r="7"/><circle cx="6" cy="9" r="7"/><circle cx="-6" cy="9" r="7"/><circle cx="-10" cy="-4" r="7"/></g><circle r="5" fill="#f4b400"/></g></svg></h1>
+    <p>Handmade crochet pieces to make your everyday spaces cozier, warmer and more you.</p>
+  </div>
+  <p class="note">Little Handmade Touches for a Happier Home ♡</p>
+</section>
+
+<div class="shop">
+  <aside>
+    <div class="panel">
+      <div class="panel-head"><span style="display:flex;align-items:center"><a class="back" href="index.html" aria-label="Back"><svg viewBox="0 0 12 12"><path d="M8 2L4 6l4 4"/></svg></a>Categories</span><a href="index.html">Shop All</a></div>
+      <div class="cat-list" id="catList"></div>
+    </div>
+
+    <div class="panel filters">
+      <div class="panel-head"><span>Filters</span><button id="clear" style="color:#c8434a;text-decoration:underline">Clear All</button></div>
+      <details class="f" open>
+        <summary>Price Range <svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></summary>
+        <div class="range"><div class="bar"></div><div class="fill" id="fill"></div>
+          <input type="range" id="minR" min="0" max="5000" step="50" value="0" aria-label="Minimum price">
+          <input type="range" id="maxR" min="0" max="5000" step="50" value="5000" aria-label="Maximum price"></div>
+        <div class="range-vals"><span id="minV">₹0</span><span id="maxV">₹5,000</span></div>
+      </details>
+      <details class="f" open>
+        <summary>Colour <svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></summary>
+        <div class="swatches" id="swatches"></div>
+      </details>
+      <details class="f" open>
+        <summary>Material <svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></summary>
+        <div class="checks" id="mats"></div>
+      </details>
+    </div>
+  </aside>
+
+  <main>
+    <div class="shop-head">
+      <div><h2>Home Essentials</h2><p id="count">24 products</p></div>
+      <select class="sort" id="sort" aria-label="Sort products">
+        <option value="featured">Sort by: Featured</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="az">Name: A to Z</option>
+      </select>
+    </div>
+    <div class="grid" id="grid"></div>
+  </main>
+</div>
+
+<div id="site-footer"></div>
+<script src="products.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
